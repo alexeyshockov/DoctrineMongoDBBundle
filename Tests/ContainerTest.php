@@ -43,7 +43,7 @@ class ContainerTest extends TestCase
     public function testContainer()
     {
         $container = $this->getContainer();
-        $this->assertInstanceOf('Doctrine\ODM\MongoDB\Mapping\Driver\DriverChain', $container->get('doctrine.odm.mongodb.metadata.chain'));
+        $this->assertInstanceOf('Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain', $container->get('doctrine.odm.mongodb.metadata.chain'));
         $this->assertInstanceOf('Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver', $container->get('doctrine.odm.mongodb.metadata.annotation'));
         $this->assertInstanceOf('Doctrine\ODM\MongoDB\Mapping\Driver\XmlDriver', $container->get('doctrine.odm.mongodb.metadata.xml'));
         $this->assertInstanceOf('Doctrine\ODM\MongoDB\Mapping\Driver\YamlDriver', $container->get('doctrine.odm.mongodb.metadata.yml'));
